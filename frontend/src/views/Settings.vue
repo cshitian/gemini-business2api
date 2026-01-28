@@ -160,7 +160,7 @@
                     v-model="localSettings.basic.moemail_base_url"
                     type="text"
                     class="w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm"
-                    placeholder="https://moemail.app"
+                    placeholder="https://moemail.nanohajimi.mom"
                   />
                   <label class="block text-xs text-muted-foreground">Moemail API 密钥</label>
                   <input
@@ -461,7 +461,7 @@ watch(settings, (value) => {
     ? next.basic.duckmail_api_key
     : ''
   next.basic.temp_mail_provider = next.basic.temp_mail_provider || defaultMailProvider
-  next.basic.moemail_base_url = next.basic.moemail_base_url || 'https://moemail.app'
+  next.basic.moemail_base_url = next.basic.moemail_base_url || 'https://moemail.nanohajimi.mom'
   next.basic.moemail_api_key = typeof next.basic.moemail_api_key === 'string'
     ? next.basic.moemail_api_key
     : ''

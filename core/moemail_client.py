@@ -129,12 +129,15 @@ class MoemailClient:
         self._log("info", f"🎲 生成邮箱: {name}@{selected_domain}")
 
         try:
+            # 设置为 0 表示永久有效
+            self._log("info", f"⏰ 设置过期时间: 永久有效")
+
             res = self._request(
                 "POST",
                 f"{self.base_url}/api/emails/generate",
                 json={
                     "name": name,
-                    "expiryTime": 3600000,  # 1小时
+                    "expiryTime": 0,
                     "domain": selected_domain,
                 },
             )
